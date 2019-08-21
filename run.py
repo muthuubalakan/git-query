@@ -54,8 +54,6 @@ class AppView:
         resp = self.get_json(url)
         json_resp = resp.json()
         return web.json_response(json_resp)
-    
-
 
 
 def setup_routes(app):

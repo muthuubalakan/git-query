@@ -1,13 +1,11 @@
 function iterator(div, resp) {
     $.each(resp,function(index,value){ 
     $.each(value, function(index2, value2) {
-
                 div.append("<p>" + value2 + "</P>")
     }); 
 
 });
 }
-
 
 function getRepo(){
     let username = $('#user').val();
@@ -17,7 +15,7 @@ function getRepo(){
         {user: username},
         function(response, status){
             response.forEach(element => {
-                $('#respdisplay').html('<button type="button" class="btn btn-primary btn-block">' + element.name +"</button> ");
+                $('#respdisplay').append('<a class="list-group-item list-group-item-action">' + element.name +"</a>");
 
             });
 
